@@ -1,0 +1,17 @@
+<ion-view view-title="途牛">
+ <ion-content>
+ 
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" >
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <p>{{chat.id}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+      </ion-item>
+
+  </ion-content>
+
+
+
+</ion-view>
