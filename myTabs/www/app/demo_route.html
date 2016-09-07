@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="routeModule">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.js"></script>
+  </head>
+  <body>
+  <h1>Angular的路由案例</h1>
+ <div ng-view></div>
+<script>
+  var routeApp = angular.module('routeModule',['ngRoute']);
+  routeApp.config(['$routeProvider',function ($routeProvider) {
+         $routeProvider
+                 .when('/luyou_list', {
+                    templateUrl: 'route/luyou_list.html',
+                    controller: 'ListRouteController'
+                 })
+                 .when('/luyou_list/:id', {
+                        templateUrl: 'route/luyou_detail.html',
+                        controller: 'DetailRouteController'
+               })
+                .otherwise({
+                  redirectTo: '/luyou_list'
+              });
+   }]);
+ routeApp.controller('ListRouteController',function($scope) {
+        $scope.myName="思思博士";
+        });
+ routeApp.controller('DetailRouteController',function($scope, $routeParams) {
+        $scope.id = $routeParams.id;
+      });
+   </script>
+</body>
+</html>

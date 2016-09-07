@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<script type="text/javascript" >
+function key(){
+var ym=document.getElementById('ss').innerHTML;//ss是要高亮的区域，div的id值
+document.getElementById('ss').innerHTML=ym.replace(/关键词/g, "<span class=keyword>关键词</span>");
+}
+</script>
+<style>
+.keyword{color: red;font-weight: bold }
+
+</style>
+<body onload="key()">
+
+<div id="ss">
+
+<strong></strong>关键词szdsfzdsfzdsfzdsfzdsfzdsf
+
+
+</div>
+</body>
+</html>

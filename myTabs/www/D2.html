@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+     <script src="js/jquery-1.9.1.js"></script>
+	  <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/mock.js"></script>
+	  <script src="js/mockdata.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+<body ng-app="starter">
+
+   <ion-side-menus>
+  <!-- 中间内容 -->
+
+      <ion-side-menu-content ng-controller="ContentController" >
+
+        <ion-header-bar align-title="left" class="bar-positive">
+          <div class="buttons">
+            <button class="button" ng-click="doSomething()">左侧按钮</button>
+          </div>
+          <h1 class="title">Title!</h1>
+          <div class="buttons">
+            <button class="button">右侧按钮</button>
+          </div>
+        </ion-header-bar>
+
+
+        <a href="###" ng-click="toggleLeft()">菜单</a>
+        中间的内容
+      </ion-side-menu-content>
+      <!-- 左侧菜单 -->
+      <ion-side-menu side="left" style=" background:#B41619">
+     左侧菜单
+      </ion-side-menu>
+
+      <!-- 右侧菜单 -->
+      <ion-side-menu side="right">
+      右侧菜单
+      </ion-side-menu>
+</ion-side-menus>
+
+</body>
+</html>
