@@ -6,41 +6,52 @@
     <title>世界那么大，窝在家里吧^_^</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
     <link href="css/style.css" rel="stylesheet">
     <style>
       .slide-img-box{height:200px; overflow: hidden}
-      .bar-jia{ background: #4AC5AC;color:#ffffff; text-align: left;}
+      .bar-jia{ background: #4AC5AC!important;color:#ffffff; text-align: left;}
+      .slider-pager .slider-pager-page {
+        display: inline-block;
+        margin: 0px 3px;
+        width: 12px;
+        color: red;
+        text-decoration: none;
+        opacity: 0.1;
+        font-size: 10px;
+      }
     </style>
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-
+    <!--data-->
+    <script src="js/mock.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/mockdata.js"></script>
     <script src="js/services.js"></script>
   </head>
   <body ng-app="starter">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
-    <!--<ion-nav-bar  align-title="left" class="bar-stable">-->
-      <!--<ion-nav-back-button>-->
-      <!--</ion-nav-back-button>-->
-    <!--</ion-nav-bar>-->
-    <ion-header-bar align-title="left" class="bar-jia">
-      <h1 class="title">BIMT首页</h1>
-      <div class="buttons">
-        <button class="button">搜索</button>
-      </div>
-    </ion-header-bar>
+    <ion-nav-bar  align-title="left" class="bar-stable">
 
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+   </ion-nav-bar>
+    <!--<ion-header-bar align-title="left" ng-controller="DashCtrl">-->
+      <!--<h1 class="title">{{title}}</h1>-->
+      <!--<div class="buttons">-->
+        <!--<button class="button">搜索</button>-->
+      <!--</div>-->
+    <!--</ion-header-bar>-->
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also

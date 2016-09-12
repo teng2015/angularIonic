@@ -1,12 +1,15 @@
 Mock.mock('/homepage/init', {
-    'name'	   : '[@name](/user/name)()',
+    'name'	   : '@name',
     'age|1-100': 100,
-    'color'	   : '[@color](/user/color)',
-	  "prizes|1-100": [// 获奖信息
+    'color'	   : '[@color]',
+	  "prizes|5": [
                 {
-                    "name": "@ctitle", // 获奖名称
-                    "prizeDate": "@date", // 获奖时间
-                    "prizeLevel": "一等奖" // 获奖等级
+                    "id | 1-100":100,
+                    "type":"论文",
+                    "title": "@ctitle",
+                    "prizeDate": "@date",
+                    "graph": "@cparagraph",
+                    "img":Mock.Random.dataImage('60x60', '论文')
                 }
             ]
 });

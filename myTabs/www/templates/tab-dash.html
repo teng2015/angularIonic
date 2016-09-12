@@ -1,58 +1,29 @@
-<ion-view view-title="BIMT首页" >
-
+<ion-view  view-title="BIMT首页" >
   <ion-content>
-        <ion-refresher
-          pulling-text="努力加载中..."
-          on-refresh="doRefresh()">
-        </ion-refresher>
-
+        <ion-refresher pulling-text="努力加载中..." on-refresh="doRefresh()"></ion-refresher>
     <!--slide-->
     <ion-slide-box>
       <ion-slide>
-        <div class="slide-img-box"><img src="../img/img01.jpg" > </div>
+        <div class="slide-img-box"><img src="../img/pic01.jpg" > </div>
       </ion-slide>
       <ion-slide>
-        <div class="slide-img-box"><img src="../img/img02.jpg" > </div>
+        <div class="slide-img-box"><img src="../img/pic02.jpg" > </div>
       </ion-slide>
       <ion-slide>
-        <div class="slide-img-box"><img src="../img/img03.jpg" > </div>
+        <div class="slide-img-box"><img src="../img/pic03.jpg" > </div>
       </ion-slide>
       <ion-slide>
-        <div class="slide-img-box"><img src="../img/img04.jpg" > </div>
+        <div class="slide-img-box"><img src="../img/pic04.jpg" > </div>
       </ion-slide>
     </ion-slide-box>
     <!--//slide-->
-    <div class="list card">
-      <div class="item item-image">
-        <img src="img/pic01.jpg">
-        </div>
-        <a class="item assertive" href="#">
-           儿时的你是否有过类似的画面
-        </a>
-    </div>
-    <div class="list card">
-      <div class="item item-image">
-        <img src="img/pic02.jpg">
-      </div>
-      <a class="item assertive" href="#">
-        儿时的你是否有过类似的画面
-      </a>
-    </div>
-    <div class="list card">
-      <div class="item item-image">
-        <img src="img/pic03.jpg">
-      </div>
-      <a class="item assertive" href="#">
-        儿时的你是否有过类似的画面
-      </a>
-    </div>
-    <div class="list card">
-      <div class="item item-image">
-        <img src="img/pic04.jpg">
-      </div>
-      <a class="item assertive" href="#">
-        儿时的你是否有过类似的画面
-      </a>
-    </div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-thumbnail-right item  item-text-wrap"  ng-repeat="chat in chats.prizes"   type="item-text-wrap" href="#/tab/dash/{{chat.id}}"><!--href="#/tab/chats/{{chat.id}}"-->
+        <img ng-src="{{chat.img}}">
+        <h2 ><i class="icon icon-qikan-font icon-qikan" style="padding-right: 4px"></i>{{chat.type}}</h2>
+        <p>{{chat.graph | limitTo: 40}}</p>
+      </ion-item>
+    </ion-list>
+
   </ion-content>
 </ion-view>

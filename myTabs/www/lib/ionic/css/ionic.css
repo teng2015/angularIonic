@@ -9811,3 +9811,44 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+
+/*自定义图标*/
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1473298721'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1473298721#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1473298721') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1473298721') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1473298721#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-iconmoban:before { content: "\e609"; }
+
+
+
+@font-face {font-family: "magafont";
+  src: url('../fonts/magafont.eot?t=1473301186'); /* IE9*/
+  src: url('../fonts/magafont.eot?t=1473301186#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/magafont.woff?t=1473301186') format('woff'), /* chrome, firefox */
+  url('../fonts/magafont.ttf?t=1473301186') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/magafont.svg?t=1473301186#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.icon-qikan-font {
+  font-family:"magafont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-qikan:before { content: "\e609"; }

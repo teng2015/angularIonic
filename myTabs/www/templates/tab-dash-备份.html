@@ -1,0 +1,64 @@
+<ion-view view-title="BIMT首页" >
+
+  <ion-content>
+        <ion-refresher pulling-text="努力加载中..." on-refresh="doRefresh()"></ion-refresher>
+    <!--slide-->
+    <ion-slide-box>
+      <ion-slide>
+        <div class="slide-img-box"><img src="../img/img01.jpg" > </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide-img-box"><img src="../img/img02.jpg" > </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide-img-box"><img src="../img/img03.jpg" > </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide-img-box"><img src="../img/img04.jpg" > </div>
+      </ion-slide>
+    </ion-slide-box>
+    <!--//slide-->
+    <ion-list>
+      <ion-item class="item-remove-animate item-thumbnail-right item  item-text-wrap"  ng-repeat="chat in datas"   type="item-text-wrap" ><!--href="#/tab/chats/{{chat.id}}"-->
+        <img ng-src="{{chat.img}}">
+        <h2 ><i class="icon icon-qikan-font icon-qikan" style="padding-right: 4px"></i>{{chat.type}}</h2>
+        <p>{{chat.graph | limitTo: 40}}</p>
+      </ion-item>
+    </ion-list>
+
+    ////////////////////
+    <div class="list"><div class="item item-divider">
+    Candy Bars
+    </div><a class="item"href="#">
+    Butterfinger
+    </a>  ...
+
+    </div>
+    //////////////////////////
+    <div class="list"><a class="item item-icon-left"href="#"><i class="icon ion-email"></i>
+    Check mail
+    </a><a class="item item-icon-left item-icon-right"href="#"><i class="icon ion-chatbubble-working"></i>
+    Call Ma
+    <i class="icon ion-ios-telephone-outline"></i></a><a class="item item-icon-left"href="#"><i class="icon ion-mic-a"></i>
+    Record album
+    <span class="item-note">
+    Grammy
+    </span></a><a class="item item-icon-left"href="#"><i class="icon ion-person-stalker"></i>
+    Friends
+    <span class="badge badge-assertive">0</span></a></div>
+    //////////////////////////////
+    <div class="list"><div class="item item-button-right">
+    Call Ma
+    <button class="button button-positive"><i class="icon ion-ios-telephone"></i></button> ...
+  </div>
+    </div>
+  //////////////////////////
+    <div class="list"><a class="item item-avatar"href="#"><img src="venkman.jpg"><h2>Venkman</h2><p>Back off, man. I'm a scientist.</p></a>    ...
+
+    </div>
+    ////////////////////////////
+    <div class="list"><a class="item item-thumbnail-right"href="#"><img src="cover.jpg"><h2>Pretty Hate Machine</h2><p>Nine Inch Nails</p></a>    ...
+
+    </div>
+  </ion-content>
+</ion-view>
